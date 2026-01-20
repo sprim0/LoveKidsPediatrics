@@ -217,9 +217,11 @@ const Home = ({ onScheduleClick }) => {
             <div className="hero-shape hero-shape-1" />
             <div className="hero-shape hero-shape-2" />
             <div className="hero-image-wrapper">
-              <div className="hero-image-placeholder">
-                <ImageIcon />
-                <span>Hero Image Placeholder<br /><small>Happy doctor with child</small></span>
+              <img 
+                  src="/src/assets/images/Hero2.jpg" 
+                  alt="Happy doctor with child" 
+                  className="hero-image-main"
+                />
               </div>
             </div>
           </div>
