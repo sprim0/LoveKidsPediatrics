@@ -224,7 +224,7 @@ const Home = ({ onScheduleClick }) => {
             <div className="hero-shape hero-shape-1" />
             <div className="hero-shape hero-shape-2" />
             <div className="hero-image-wrapper">
-              <img src={heroImage} alt="Happy doctor with child" />
+              <img src={headshotImage} alt="Dr. Jackson" />
             </div>
           </div>
         </div>
@@ -286,7 +286,7 @@ const Home = ({ onScheduleClick }) => {
             
             <div className="why-image">
               <div className="why-image-wrapper">
-                <img src={headshotImage} alt="Dr. Jackson" />
+                <img src={heroImage} alt="Happy doctor with child" />
               </div>
               <div className="why-stats">
                 <div className="why-stat">
