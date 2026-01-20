@@ -2,8 +2,7 @@ import './Home.css';
 
 // Images
 import heroImage from '../assets/images/Hero2.jpg';
-import banner1 from '../assets/images/Banner1.jpg';
-import banner2 from '../assets/images/Banner2.jpg';
+import mainBanner from '../assets/images/mainbanner.jpg';
 import headshotImage from '../assets/images/Headshot.jpg';
 import buildingImage from '../assets/images/Building.jpg';
 
@@ -224,7 +223,7 @@ const Home = ({ onScheduleClick }) => {
             <div className="hero-shape hero-shape-1" />
             <div className="hero-shape hero-shape-2" />
             <div className="hero-image-wrapper">
-              <img src={headshotImage} alt="Dr. Jackson" />
+              <img src={heroImage} alt="Happy doctor with child" />
             </div>
           </div>
         </div>
@@ -252,9 +251,9 @@ const Home = ({ onScheduleClick }) => {
         </div>
       </section>
 
-      {/* Image Break 1 */}
+      {/* Image Break */}
       <div className="image-overlay-section">
-        <img src={banner2} alt="Happy children playing together" />
+        <img src={mainBanner} alt="Love Kids Pediatrics" />
       </div>
 
       {/* Why Choose Us Section */}
@@ -286,7 +285,7 @@ const Home = ({ onScheduleClick }) => {
             
             <div className="why-image">
               <div className="why-image-wrapper">
-                <img src={heroImage} alt="Happy doctor with child" />
+                <img src={headshotImage} alt="Dr. Jackson" />
               </div>
               <div className="why-stats">
                 <div className="why-stat">
@@ -302,11 +301,6 @@ const Home = ({ onScheduleClick }) => {
           </div>
         </div>
       </section>
-
-      {/* Image Break 2 */}
-      <div className="image-overlay-section from-white">
-        <img src={banner1} alt="Warm, welcoming office environment" />
-      </div>
 
       {/* Contact Section */}
       <section className="contact-section">
