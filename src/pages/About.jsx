@@ -1,5 +1,9 @@
 import './About.css';
 
+// Images
+import headshotImage from '../assets/images/Headshot.jpg';
+import staffPartyImage from '../assets/images/StaffParty.jpg';
+
 const About = () => {
   const ImageIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -53,10 +57,7 @@ const About = () => {
           <div className="doctor-container">
             <div className="doctor-image">
               <div className="doctor-image-wrapper">
-                <div className="image-placeholder">
-                  <ImageIcon />
-                  <span>Dr. Jackson Photo</span>
-                </div>
+                <img src={headshotImage} alt="Dr. Yvonne M Jackson" />
               </div>
               <div className="doctor-credentials-badge">
                 <span>Board Certified Pediatrician</span>
@@ -162,10 +163,7 @@ const About = () => {
             </div>
             
             <div className="mission-image">
-              <div className="image-placeholder large">
-                <ImageIcon />
-                <span>Office / Team Photo</span>
-              </div>
+              <img src={staffPartyImage} alt="Our team" className="mission-img" />
             </div>
           </div>
         </div>
