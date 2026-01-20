@@ -2,7 +2,7 @@ import './Home.css';
 
 // Images
 import heroImage from '../assets/images/Hero2.jpg';
-import mainBanner from '../assets/images/mainbanner.jpg';
+import mainBanner from '../assets/images/MainBanner.jpg';
 import headshotImage from '../assets/images/Headshot.jpg';
 import buildingImage from '../assets/images/Building.jpg';
 
