@@ -1,5 +1,12 @@
 import './Home.css';
 
+// Images
+import heroImage from '../assets/images/Hero2.jpg';
+import banner1 from '../assets/images/Banner1.jpg';
+import banner2 from '../assets/images/Banner2.jpg';
+import headshotImage from '../assets/images/Headshot.jpg';
+import buildingImage from '../assets/images/Building.jpg';
+
 const Home = ({ onScheduleClick }) => {
   // Icons
   const HeartIcon = () => (
@@ -217,12 +224,7 @@ const Home = ({ onScheduleClick }) => {
             <div className="hero-shape hero-shape-1" />
             <div className="hero-shape hero-shape-2" />
             <div className="hero-image-wrapper">
-              <img 
-                  src="/src/assets/images/Hero2.jpg" 
-                  alt="Happy doctor with child" 
-                  className="hero-image-main"
-                />
-              </div>
+              <img src={heroImage} alt="Happy doctor with child" />
             </div>
           </div>
         </div>
@@ -252,10 +254,7 @@ const Home = ({ onScheduleClick }) => {
 
       {/* Image Break 1 */}
       <div className="image-overlay-section">
-        <div className="image-overlay-placeholder" style={{ background: 'linear-gradient(135deg, #A8C5B5 0%, #B5D4E8 100%)' }}>
-          <ImageIcon />
-          <span>Image Placeholder<br /><small>Happy children playing together</small></span>
-        </div>
+        <img src={banner2} alt="Happy children playing together" />
       </div>
 
       {/* Why Choose Us Section */}
@@ -287,10 +286,7 @@ const Home = ({ onScheduleClick }) => {
             
             <div className="why-image">
               <div className="why-image-wrapper">
-                <div className="image-overlay-placeholder" style={{ background: 'linear-gradient(135deg, #F2C4BB 0%, #F7E6B0 100%)' }}>
-                  <ImageIcon />
-                  <span>Image Placeholder<br /><small>Dr. Jackson with patient</small></span>
-                </div>
+                <img src={headshotImage} alt="Dr. Jackson" />
               </div>
               <div className="why-stats">
                 <div className="why-stat">
@@ -309,10 +305,7 @@ const Home = ({ onScheduleClick }) => {
 
       {/* Image Break 2 */}
       <div className="image-overlay-section from-white">
-        <div className="image-overlay-placeholder" style={{ background: 'linear-gradient(135deg, #E8A598 0%, #C4B5D4 100%)' }}>
-          <ImageIcon />
-          <span>Image Placeholder<br /><small>Warm, welcoming office environment</small></span>
-        </div>
+        <img src={banner1} alt="Warm, welcoming office environment" />
       </div>
 
       {/* Contact Section */}
@@ -371,10 +364,9 @@ const Home = ({ onScheduleClick }) => {
             </div>
             
             <div className="contact-map">
-              <div className="map-placeholder">
-                <MapPinIcon />
-                <span>Map Placeholder<br /><small>Google Maps embed</small></span>
-              </div>
+              <a href="https://share.google/4tQWH04mRax80DTln" target="_blank" rel="noopener noreferrer">
+                <img src={buildingImage} alt="Office building" />
+              </a>
             </div>
           </div>
         </div>
