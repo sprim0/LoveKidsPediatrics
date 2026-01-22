@@ -60,6 +60,34 @@ const Forms = () => {
         </div>
       </section>
 
+      {/* Forms List */}
+      <section className="forms-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Available Forms</h2>
+            <p>Download the forms you need for your visit</p>
+          </div>
+          
+          <div className="forms-grid">
+            {forms.map((form, index) => (
+              <div key={index} className="form-card">
+                <div className="form-icon">
+                  <FileIcon />
+                </div>
+                <div className="form-content">
+                  <h3>{form.name}</h3>
+                  <p>{form.description}</p>
+                </div>
+                <a href="#" className="form-download" aria-label={`Download ${form.name}`}>
+                  <DownloadIcon />
+                  <span>Download PDF</span>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Instructions */}
       <section className="instructions-section">
         <div className="container">
@@ -96,34 +124,6 @@ const Forms = () => {
                 All forms must be completed on paper and submitted in person.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Forms List */}
-      <section className="forms-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>Available Forms</h2>
-            <p>Download the forms you need for your visit</p>
-          </div>
-          
-          <div className="forms-grid">
-            {forms.map((form, index) => (
-              <div key={index} className="form-card">
-                <div className="form-icon">
-                  <FileIcon />
-                </div>
-                <div className="form-content">
-                  <h3>{form.name}</h3>
-                  <p>{form.description}</p>
-                </div>
-                <a href="#" className="form-download" aria-label={`Download ${form.name}`}>
-                  <DownloadIcon />
-                  <span>Download PDF</span>
-                </a>
-              </div>
-            ))}
           </div>
         </div>
       </section>
