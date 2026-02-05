@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/LoveKids_logo.png';
 
 const Navbar = ({ onScheduleClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +52,6 @@ const Navbar = ({ onScheduleClick }) => {
           {/* Logo */}
           <Link to="/" className="nav-logo">
             <img src={logo} alt="Love Kids Pediatrics" className="nav-logo-img" />
-            <span className="nav-logo-text">Yvonne M Jackson, MD</span>
           </Link>
 
           {/* Desktop Navigation */}

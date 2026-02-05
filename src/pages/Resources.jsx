@@ -1,8 +1,8 @@
 import './Resources.css';
 
-const Resources = () => {
+const Resources = ({ onScheduleClick }) => {
   const ExternalLinkIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
       <polyline points="15 3 21 3 21 9" />
       <line x1="10" y1="14" x2="21" y2="3" />
@@ -10,52 +10,19 @@ const Resources = () => {
   );
 
   const CheckIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="20 6 9 17 4 12" />
     </svg>
   );
 
   const CalendarIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
       <line x1="16" y1="2" x2="16" y2="6" />
       <line x1="8" y1="2" x2="8" y2="6" />
       <line x1="3" y1="10" x2="21" y2="10" />
     </svg>
   );
-
-  const acceptedInsurance = [
-    'Aetna',
-    'Allegiant',
-    'APWU',
-    'Blue Cross Blue Shield',
-    'Cigna',
-    'Conifer',
-    'ConnectCare',
-    'CoreSource',
-    'Coventry',
-    'Evergreen Health',
-    'First Health',
-    'HealthScope',
-    'Humana',
-    'InforMed',
-    'Johns Hopkins',
-    'Maryland Physicians Care',
-    'Medstar',
-    'Meritan Health',
-    'Multiplan',
-    'Multiplan PPO',
-    'NCAS',
-    'One Net PPO',
-    'Optima Health',
-    'PHCS',
-    'Priority Partners',
-    'StarMark',
-    'Tricare Standard',
-    'UMR',
-    'United HealthCare',
-    'Wellpointe',
-  ];
 
   const annualVisitBenefits = [
     'Track height, weight, and growth patterns',
@@ -97,36 +64,22 @@ const Resources = () => {
       <section className="page-header">
         <div className="container">
           <h1>Patient Resources</h1>
+          <div className="page-header-divider"></div>
           <p>Helpful information for your family's health journey</p>
-        </div>
-      </section>
-
-      {/* Accepted Insurance */}
-      <section className="insurance-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>Accepted Insurance Plans</h2>
-            <p>We accept most major insurance providers</p>
-          </div>
-          
-          <div className="insurance-list">
-            {acceptedInsurance.map((name, index) => (
-              <span key={index} className="insurance-item">{name}</span>
-            ))}
-          </div>
-          
-          <p className="insurance-note">
-            Don't see your insurance? Contact us at (301) 262-4784 to verify coverage.
-          </p>
         </div>
       </section>
 
       {/* Annual Visits */}
       <section className="annual-section">
         <div className="container">
+          <div className="section-header">
+            <h2>The Importance of Annual Well-Child Visits</h2>
+            <div className="section-header-divider"></div>
+            <p>Regular checkups are essential for your child's health</p>
+          </div>
+
           <div className="annual-container">
             <div className="annual-content">
-              <h2>The Importance of Annual Well-Child Visits</h2>
               <p className="annual-intro">
                 Regular checkups are essential for monitoring your child's growth and development, 
                 even when they appear healthy. Annual visits help catch potential issues early and 
@@ -150,8 +103,9 @@ const Resources = () => {
               <CalendarIcon />
               <h3>Schedule Your Child's Checkup</h3>
               <p>Is your child due for their annual visit?</p>
-              <span className="btn btn-coral phone-display">Call (301) 262-4784</span>
-              <a href="tel:3012624784" className="btn btn-coral phone-mobile">Call to Schedule</a>
+              <button className="btn btn-coral" onClick={onScheduleClick}>
+                Schedule Visit
+              </button>
             </div>
           </div>
         </div>
@@ -161,7 +115,8 @@ const Resources = () => {
       <section className="resources-section">
         <div className="container">
           <div className="section-header">
-            <h2>Recommended Websites & Resources</h2>
+            <h2>Recommended Resources</h2>
+            <div className="section-header-divider"></div>
             <p>Trusted sources for pediatric health information</p>
           </div>
           
@@ -184,7 +139,6 @@ const Resources = () => {
           </div>
         </div>
       </section>
-
     </main>
   );
 };

@@ -1,6 +1,39 @@
 /* ===========================================
    FORMS PAGE STYLES
+   Mobile-First • Playful Elegance
    =========================================== */
+
+/* ========== SECTION HEADERS ========== */
+
+.forms-section .section-header,
+.instructions-section .section-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.forms-section .section-header h2,
+.instructions-section .section-header h2 {
+  font-size: var(--text-3xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-4);
+}
+
+.forms-section .section-header .section-header-divider,
+.instructions-section .section-header .section-header-divider {
+  width: 80px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 3px;
+  margin: 0 auto var(--space-4);
+}
+
+.forms-section .section-header p,
+.instructions-section .section-header p {
+  font-size: var(--text-lg);
+  color: var(--color-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 /* ========== NOTICE SECTION ========== */
 
@@ -123,7 +156,18 @@
 
 .forms-section {
   padding: var(--space-16) 0;
-  background-color: var(--color-cream);
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.forms-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #ED1C24, #FFF54E, #00A651, #0065A1);
 }
 
 .forms-section.alt {
@@ -140,6 +184,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .form-card {
@@ -147,8 +193,49 @@
   flex-direction: column;
   gap: var(--space-4);
   padding: var(--space-5);
-  background-color: var(--color-white);
-  border-radius: var(--radius-xl);
+  background-color: var(--color-cream);
+  border-radius: 24px;
+  border: 3px solid var(--color-charcoal);
+  box-shadow: 6px 6px 0 var(--color-charcoal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 var(--color-charcoal);
+}
+
+/* Alternating card colors for playfulness */
+.form-card:nth-child(1) {
+  border-color: var(--color-primary);
+  box-shadow: 6px 6px 0 var(--color-primary);
+}
+.form-card:nth-child(1):hover {
+  box-shadow: 10px 10px 0 var(--color-primary);
+}
+
+.form-card:nth-child(2) {
+  border-color: var(--color-accent-dark);
+  box-shadow: 6px 6px 0 var(--color-accent-dark);
+}
+.form-card:nth-child(2):hover {
+  box-shadow: 10px 10px 0 var(--color-accent-dark);
+}
+
+.form-card:nth-child(3) {
+  border-color: var(--color-secondary);
+  box-shadow: 6px 6px 0 var(--color-secondary);
+}
+.form-card:nth-child(3):hover {
+  box-shadow: 10px 10px 0 var(--color-secondary);
+}
+
+.form-card:nth-child(4) {
+  border-color: var(--color-success);
+  box-shadow: 6px 6px 0 var(--color-success);
+}
+.form-card:nth-child(4):hover {
+  box-shadow: 10px 10px 0 var(--color-success);
 }
 
 .forms-section.alt .form-card {
@@ -221,22 +308,20 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-4);
-  background-color: var(--color-cream);
+  background-color: var(--color-white);
   color: var(--color-primary-dark);
   font-size: var(--text-sm);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
   text-decoration: none;
   border-radius: var(--radius-full);
-  transition: all var(--duration-fast) var(--ease-default);
+  border: 2px solid var(--color-primary);
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
-.forms-section.alt .form-download {
-  background-color: var(--color-white);
-}
-
 .form-download:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .form-download svg {
@@ -310,20 +395,16 @@
   max-width: 800px;
   margin: 0 auto;
   background-color: var(--color-white);
-  border-radius: var(--radius-2xl);
+  border-radius: 24px;
   padding: var(--space-6);
+  border: 3px solid var(--color-charcoal);
+  box-shadow: 6px 6px 0 var(--color-accent-dark);
 }
 
 @media (min-width: 768px) {
   .instructions-card {
     padding: var(--space-8);
   }
-}
-
-.instructions-card h3 {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-6);
-  text-align: center;
 }
 
 .instructions-content {
@@ -349,17 +430,19 @@
 }
 
 .step-number {
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-warm);
+  width: 48px;
+  height: 48px;
+  background: var(--color-accent);
   color: var(--color-charcoal);
   font-weight: var(--font-bold);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-3);
+  border: 3px solid var(--color-charcoal);
+  transform: rotate(-5deg);
 }
 
 .instruction-step h4 {

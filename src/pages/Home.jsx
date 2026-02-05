@@ -8,6 +8,13 @@ import whyImage from '../assets/images/Hero2.jpg';
 import buildingImage from '../assets/images/Building.jpg';
 import coughImage from '../assets/images/Cough.jpg';
 import happyImage from '../assets/images/Happy.jpg';
+import wellChildImage from '../assets/images/1.4.png';
+import vaccinationsImage from '../assets/images/1.1.png';
+import sickVisitsImage from '../assets/images/1.5.png';
+import sportsImage from '../assets/images/1.6.jpg';
+import learningImage from '../assets/images/1.3.png';
+import chronicImage from '../assets/images/1.2.png';
+import officeImage from '../assets/images/Office1.jpg';
 
 const Home = ({ onScheduleClick }) => {
   // Icons
@@ -112,37 +119,37 @@ const Home = ({ onScheduleClick }) => {
 
   const services = [
     {
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop',
+      image: wellChildImage,
       title: 'Well-Child Visits',
       description: 'Comprehensive checkups to monitor growth, development, and overall health at every stage.',
       color: 'primary'
     },
     {
-      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=400&h=300&fit=crop',
+      image: vaccinationsImage,
       title: 'Vaccinations',
       description: 'Complete immunization services following CDC guidelines to protect your child.',
       color: 'accent'
     },
     {
-      image: coughImage,
+      image: sickVisitsImage,
       title: 'Sick Visits',
       description: 'Same-day appointments available when your little one isn\'t feeling their best.',
       color: 'secondary'
     },
     {
-      image: 'https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=400&h=300&fit=crop',
+      image: sportsImage,
       title: 'Sports Physicals',
       description: 'Pre-participation exams to ensure your child is ready for athletics and activities.',
       color: 'warm'
     },
     {
-      image: happyImage,
+      image: learningImage,
       title: 'Learning & Development',
       description: 'Assessment and support for developmental milestones and learning concerns.',
       color: 'lavender'
     },
     {
-      image: 'https://images.unsplash.com/photo-1632053002928-1919605ee6f7?w=400&h=300&fit=crop',
+      image: chronicImage,
       title: 'Chronic Care',
       description: 'Ongoing management for asthma, allergies, ADHD, and other chronic conditions.',
       color: 'primary'
@@ -184,7 +191,19 @@ const Home = ({ onScheduleClick }) => {
             </div>
             
             <h1 className="hero-title">
-              We <span className="hero-title-highlight">Love Kids</span> —<br />
+              We{' '}
+              <span className="hero-title-highlight">
+                <span className="letter-red">L</span>
+                <span className="letter-blue">o</span>
+                <span className="letter-yellow">v</span>
+                <span className="letter-green">e</span>
+                {' '}
+                <span className="letter-red">K</span>
+                <span className="letter-blue">i</span>
+                <span className="letter-yellow">d</span>
+                <span className="letter-green">s</span>
+              </span>
+              {' '}—<br />
               And It Shows
             </h1>
             
@@ -237,6 +256,7 @@ const Home = ({ onScheduleClick }) => {
         <div className="container">
           <div className="section-header">
             <h2>Our Services</h2>
+            <div className="why-header-divider"></div>
             <p>Comprehensive care for every stage of your child's journey</p>
           </div>
           
@@ -255,59 +275,49 @@ const Home = ({ onScheduleClick }) => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="why-section">
-        <div className="container">
-          <div className="why-container">
-            <div className="why-content">
+        <section className="why-section">
+          <div className="container">
+            <div className="why-header">
               <h2>Why Families Choose Us</h2>
+              <div className="why-header-divider"></div>
               <p className="why-intro">
-                For 15 years, families have trusted Love Kids Pediatrics with their children's 
-                health. We combine medical excellence with genuine warmth to create an experience 
-                that puts both parents and children at ease.
+                Trusted care for over 15 years
               </p>
-              
-              <div className="why-features">
-                {whyChooseUs.map((item, index) => (
-                  <div key={index} className="why-feature">
-                    <div className="why-feature-icon">
-                      {item.icon}
-                    </div>
-                    <div className="why-feature-content">
+            </div>
+            
+            <div className="why-container">
+              <div className="why-content">
+                <div className="why-features">
+                  {whyChooseUs.map((item, index) => (
+                    <div key={index} className="why-card">
+                      <div className="why-card-icon">
+                        {item.icon}
+                      </div>
                       <h4>{item.title}</h4>
                       <p>{item.description}</p>
                     </div>
+                  ))}
+                </div>
+                
+                <Link to="/about" className="btn btn-white btn-lg why-learn-more">
+                  Learn More About Us
+                </Link>
+
+                <div className="why-stats">
+                  <div className="why-stat">
+                    <span className="why-stat-label">For 15 years, families have trusted Love Kids Pediatrics with their children's health. We combine medical excellence with genuine warmth to create an experience that puts both parents and children at ease.</span>
                   </div>
-                ))}
+                </div>
               </div>
               
-              <Link to="/about" className="btn btn-primary btn-lg why-learn-more">
-                Learn More About Us
-              </Link>
-            </div>
-            
-            <div className="why-image">
-              <div className="why-image-wrapper">
-                <img src={whyImage} alt="Dr. Jackson" />
-              </div>
-              <div className="why-stats">
-                <div className="why-stat">
-                  <span className="why-stat-number">5,000+</span>
-                  <span className="why-stat-label">Families Served</span>
-                </div>
-                <div className="why-stat">
-                  <span className="why-stat-number">15</span>
-                  <span className="why-stat-label">Years Serving the Community</span>
+              <div className="why-image">
+                <div className="why-image-wrapper">
+                  <img src={officeImage} alt="Love Kids Pediatrics Office" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Image Break */}
-      <div className="image-overlay-section">
-        <img src={mainBanner} alt="Love Kids Pediatrics" />
-      </div>
+        </section>
 
       {/* Contact Section */}
       <section className="contact-section">

@@ -1,21 +1,15 @@
 import './About.css';
 
 // Images
-import headshotImage from '../assets/images/Headshot.jpg';
+import office2Image from '../assets/images/Office2.png';
 import staffPartyImage from '../assets/images/StaffParty.jpg';
 import staff1Image from '../assets/images/Staff1.jpg';
 import staff2Image from '../assets/images/Staff2.jpg';
 import staff3Image from '../assets/images/Staff3.jpg';
+import affiliation1Image from '../assets/images/affiliation1.jpg';
+import affiliation2Image from '../assets/images/affiliation2.png';
 
 const About = () => {
-  const ImageIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-      <circle cx="8.5" cy="8.5" r="1.5" />
-      <polyline points="21 15 16 10 5 21" />
-    </svg>
-  );
-
   const CheckIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="20 6 9 17 4 12" />
@@ -37,9 +31,8 @@ const About = () => {
   ];
 
   const affiliations = [
-    { name: 'American Academy of Pediatrics', abbr: 'AAP' },
-    { name: 'American Medical Association', abbr: 'AMA' },
-    { name: 'State Pediatric Society', abbr: 'SPS' },
+    { name: 'American Academy of Pediatrics', image: affiliation1Image },
+    { name: 'American Medical Association', image: affiliation2Image },
   ];
 
   return (
@@ -48,6 +41,7 @@ const About = () => {
       <section className="page-header">
         <div className="container">
           <h1>About Us</h1>
+          <div className="page-header-divider"></div>
           <p>Get to know the team dedicated to your child's health and happiness</p>
         </div>
       </section>
@@ -58,7 +52,7 @@ const About = () => {
           <div className="doctor-container">
             <div className="doctor-image">
               <div className="doctor-image-wrapper">
-                <img src={headshotImage} alt="Dr. Yvonne M Jackson" />
+                <img src={office2Image} alt="Dr. Yvonne M Jackson" />
               </div>
               <div className="doctor-credentials-badge">
                 <span>Board Certified Pediatrician</span>
@@ -117,6 +111,7 @@ const About = () => {
         <div className="container">
           <div className="section-header">
             <h2>Meet Our Team</h2>
+            <div className="section-header-divider"></div>
             <p>The friendly faces you'll see at every visit</p>
           </div>
           
@@ -168,10 +163,10 @@ const About = () => {
         </div>
       </section>
 
-      {/* Credentials Section */}
-      <section className="credentials-section">
+      {/* Credentials, Affiliations & Community - Combined Section */}
+      <section className="combined-section">
         <div className="container">
-          <div className="credentials-container">
+          <div className="combined-grid">
             <div className="credentials-list">
               <h3>Credentials & Certifications</h3>
               <ul>
@@ -189,36 +184,31 @@ const About = () => {
               <div className="affiliation-badges">
                 {affiliations.map((item, index) => (
                   <div key={index} className="affiliation-badge">
-                    <span className="abbr">{item.abbr}</span>
+                    <div className="affiliation-logo">
+                      <img src={item.image} alt={item.name} />
+                    </div>
                     <span className="name">{item.name}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Community Section */}
-      <section className="community-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>Community Involvement</h2>
-            <p>Giving back to the families we serve</p>
-          </div>
-          
-          <div className="community-grid">
-            <div className="community-item">
-              <h4>School Health Programs</h4>
-              <p>We partner with local schools to provide health education and screenings.</p>
-            </div>
-            <div className="community-item">
-              <h4>Youth Sports Physicals</h4>
-              <p>Annual free sports physical events for underserved youth in our community.</p>
-            </div>
-            <div className="community-item">
-              <h4>Parent Education</h4>
-              <p>Regular workshops on child development, nutrition, and safety topics.</p>
+            <div className="community-list">
+              <h3>Community Involvement</h3>
+              <div className="community-items">
+                <div className="community-item">
+                  <h4>School Health Programs</h4>
+                  <p>We partner with local schools to provide health education and screenings.</p>
+                </div>
+                <div className="community-item">
+                  <h4>Youth Sports Physicals</h4>
+                  <p>Annual free sports physical events for underserved youth in our community.</p>
+                </div>
+                <div className="community-item">
+                  <h4>Parent Education</h4>
+                  <p>Regular workshops on child development, nutrition, and safety topics.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

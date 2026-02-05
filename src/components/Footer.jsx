@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/LoveKids_logo.png';
 
 const Footer = ({ onScheduleClick }) => {
   const currentYear = new Date().getFullYear();
@@ -77,7 +77,6 @@ const Footer = ({ onScheduleClick }) => {
           <div className="footer-brand">
             <div className="footer-logo">
               <img src={logo} alt="Love Kids Pediatrics" className="footer-logo-img" />
-              <span className="footer-logo-text">Yvonne M Jackson, MD</span>
             </div>
             <p className="footer-tagline">
               Providing compassionate, comprehensive pediatric care for children from birth through adolescence. Your child's health is our priority.
