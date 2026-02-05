@@ -6,8 +6,8 @@ import staffPartyImage from '../assets/images/StaffParty.jpg';
 import staff1Image from '../assets/images/Staff1.jpg';
 import staff2Image from '../assets/images/Staff2.jpg';
 import staff3Image from '../assets/images/Staff3.jpg';
-import affiliation1Image from '../assets/images/affiliation1.jpg';
-import affiliation2Image from '../assets/images/affiliation2.png';
+import affiliation1Image from '../assets/images/Affiliation1.jpg';
+import affiliation2Image from '../assets/images/Affiliation2.png';
 
 const About = () => {
   const CheckIcon = () => (
